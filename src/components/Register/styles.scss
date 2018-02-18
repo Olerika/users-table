@@ -1,0 +1,44 @@
+@import '../../theme/palette';
+
+.register {
+    padding-left: 58px;
+    .red {
+        border: 1px solid red;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+    input {
+        border: 1px solid transparent;
+        background-color: #f4f7f8;
+        border-radius: 21px;
+        height: 42px;
+        line-height: 42px;
+        padding: 0px 20px;
+        margin: 0 5px;
+        outline: 0;
+        min-width: 80px;
+        font-size: 14px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &:focus::placeholder {
+            color: lighten($paletteColor5, 20%);
+        }
+
+    }
+    input[type='submit'] {
+        background-color: #01aaff;
+        color: #fff;
+        width: 145px;
+    }
+    input[name="totalItems"] {
+        margin-left: 70px;
+    }
+    input[name="points"] {
+        margin-left: 140px;
+    }
+}

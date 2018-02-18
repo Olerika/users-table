@@ -1,0 +1,71 @@
+@import '../../theme/palette';
+@import '../../theme/animations';
+
+
+.tablerow {
+    display: flex;
+    width: 1560px;
+    padding: 11px 20px;
+    border-top: 1px solid rgba(223, 232, 236, 0.4);
+    border-bottom: 1px solid rgba(223, 232, 236, 0.4);
+    margin: 24px -24px;
+
+    div {
+        margin: 0;
+        padding: 5px;
+        color: #313b3d;
+        font-weight: bold;
+        width: 100px;
+        text-align: center;
+
+        &:nth-child(1){
+            width: 60px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        &:nth-child(2){
+            width: 210px;
+            text-align: left;
+        }
+        &:nth-child(3){
+            width: 200px;
+            text-align: left;
+        }
+        &:nth-child(6){
+            text-align: left;
+            margin-left: 70px;
+        }
+        &:nth-child(5){
+            width: 145px;
+        }
+        &:nth-child(7){
+            width: 115px;
+        }
+        &:nth-child(8){
+            width: 150px;
+        }
+    }
+}
+
+.postInStart {
+    transform: scale(.5);
+    opacity: .01;
+}
+
+.postInEnd {
+    transform: scale(1) ;
+    opacity: 1;
+    transition: opacity 700ms $cubic1, transform 700ms $cubic1;
+}
+
+.postOutStart {
+    transform:rotate3d(0,0,0,0) translate(0,0);
+    opacity: 1;
+}
+
+.postOutEnd {
+    transform: rotate3d(3,2,1,107deg) translate(1250px,-110px);
+    opacity: .01;
+    transition: opacity 600ms $cubic2, transform 600ms $cubic2;
+}

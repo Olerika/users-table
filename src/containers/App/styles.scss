@@ -1,0 +1,26 @@
+@import '../../theme/palette';
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 15px;
+    background-color: #f7f9fa;
+
+    > div {
+        background-color: #fff;
+        padding: 40px 20px 60px;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    h1, p {
+        margin: auto;
+        color: #404c4e;
+    }
+}
